@@ -7,6 +7,14 @@
     <list default="true" id="9b0dad4d-1f2c-4b39-adfd-c535bcbc511c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../../base_layer/mmr/tests/merkle_mountain_range.rs" beforeDir="false" afterPath="$PROJECT_DIR$/../../base_layer/mmr/tests/merkle_mountain_range.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../common/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/../../common/Cargo.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/corpus_gen/src/lib.rs" beforeDir="false" afterPath="$PROJECT_DIR$/common/corpus_gen/src/lib.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fuzz/Cargo.lock" beforeDir="false" afterPath="$PROJECT_DIR$/fuzz/Cargo.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fuzz/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/fuzz/Cargo.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fuzz_targets/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/fuzz_targets/Cargo.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fuzz_targets/mod.rs" beforeDir="false" afterPath="$PROJECT_DIR$/fuzz_targets/mod.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cli.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/cli.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/runner.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/runner.rs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

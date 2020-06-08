@@ -364,6 +364,7 @@ name = "fuzz_targets"
 version = "0.1.0"
 dependencies = [
  "digest",
+ "lazy_static",
  "proptest",
  "proptest_helper",
  "tari_crypto",
@@ -1141,6 +1142,7 @@ dependencies = [
 name = "tari_fuzzer-fuzz"
 version = "0.0.0"
 dependencies = [
+ "fuzz_targets",
  "libfuzzer-sys",
  "tari_fuzzer",
 ]

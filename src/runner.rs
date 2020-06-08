@@ -16,7 +16,7 @@ use std::{
 
 use self::anyhow::{anyhow,bail, Result, Error, Context};
 use self::proptest_helper::SeedGen;
-use self::fuzz_targets::fuzz_mmr::{create_seeds_mmr_push_bytes, fuzz_mmr_push_bytes};
+use self::fuzz_targets::*;
 use self::crypto::digest::Digest;
 
 
@@ -26,7 +26,7 @@ pub fn gen_corpus(target: &str, corpus_dir: PathBuf, num_items: usize) -> Result
 
     let mut idx :usize = 0;
     while idx < num_items {
-        let seeds = create_seeds_mmr_push_bytes(&mut gen);
+        let seeds = fuzz_mmr_push_bytes_seeds(&mut gen);
         println!("{:?}", seeds);
         let name = hex::encode(&seeds);
         let filename = corpus_dir.join(name);
@@ -55,6 +55,7 @@ fn create_dir(target: &str, corpus_dir: PathBuf) -> Result<(PathBuf)> {
 
 pub fn run_libfuzzer(target: String, corpus_dir: PathBuf, artifacts_dir: PathBuf, num_items: usize) -> Result<()> {
     println!("Hello from libfuzzer");
+
     let custom_corpus = gen_corpus(&target,corpus_dir,num_items);
     let targets = Command::new("cargo")
         .arg("fuzz")

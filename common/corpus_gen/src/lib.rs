@@ -22,7 +22,6 @@ impl SeedGen {
         }
     }
 
-    /// Generates a single value for this strategy.
     pub fn generate<S: Strategy>(&mut self, strategy: S) -> S::Value {
         strategy
             .new_tree(&mut self.runner)

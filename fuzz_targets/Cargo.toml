@@ -11,7 +11,6 @@ version = "0.1.0"
 [lib]
 path = "mod.rs"
 
-
 [dependencies]
 tari_crypto = { version = "^0.3" }
 digest = "0.8.0"

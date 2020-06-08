@@ -136,12 +136,12 @@ fn main() {
         }
 
         //List available engines
-        Run::ListEngines  => {
+        Run::ListEngines {} => {
             println!("Current supported engines are (1) {:?} (2) {:?} (3) {:?}",
                      Fuzzer::AFL, Fuzzer::Libfuzzer, Fuzzer::Hongfuzz);
         }
         //List available targets
-        Run::ListTargets => {
+        Run::ListTargets {}=> {
             println!("List targets 1234");
             fuzz_targets::list_targets();
         }

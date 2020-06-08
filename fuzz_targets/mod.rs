@@ -4,21 +4,17 @@ extern crate tari_crypto;
 extern crate digest;
 extern crate tari_mmr;
 extern crate lazy_static;
+use tari_crypto::common::Blake256;
+use digest::Digest;
+use proptest::prelude::*;
 
-use lazy_static::lazy_static;
+use proptest_helper::SeedGen;
+use tari_mmr::MerkleMountainRange;
+pub type Hasher = Blake256;
 
 pub mod fuzz_mmr;
 
-lazy_static! {
-    #[derive(Debug, Copy, Clone)]
-    pub static ref TARGETS: Vec<Box< &'static str>> = vec![
-    // List fuzz targets here in this format.
-    Box::new("fuzz_mmr_push_bytes"),
-    Box::new("bar"),
-];
-    static ref COUNT: usize = TARGETS.len();
-
-}
+const TARGETS: &[&str] = &["fuzz_mmr_push_bytes"];
 
 pub fn list_targets() {
     for target in &*TARGETS {
@@ -26,10 +22,49 @@ pub fn list_targets() {
     }
 }
 
-pub fn get_target(target: &str) -> Results<()> {
-    if TARGETS.iter().find(|xy| *xy == target).is_none() {
-        panic!(
-            "Could not find the target {}, please use valid/available target", target
-        );
+pub fn get_target(target: &str)  {
+    if TARGETS.iter().any(|x| *x != target) {
+        panic!("Uknkown fuzz target {} selected", target);
+    }
+
+}
+
+///MMR fuzzing
+pub fn fuzz_mmr_push_bytes_seeds(gen: &mut SeedGen) -> Vec<u8> {
+    let data = gen.generate(proptest::arbitrary::any::<Vec<u8>>());
+    data
+
+}
+
+pub fn fuzz_mmr_push_bytes(data: &[u8]) {
+    if let Ok(s) = std::str::from_utf8(data) {
+
+        let mut mmr = MerkleMountainRange::<Hasher, _>::new(Vec::default());
+
+        let empty_hash = Hasher::digest(b"").to_vec();
+        assert_eq!(mmr.get_merkle_root(), Ok(empty_hash));
+
+        for n in 0..1001 {
+            let hash = Hasher::digest(&data).to_vec();
+            //  println!("Hash is: {:?}", &hash);
+            let pushd = mmr.push(&hash);
+            assert!(pushd.is_ok());
+            let cnt = mmr.get_leaf_count().unwrap();
+            assert!(mmr.len().is_ok());
+
+            // println!("Leaf count: {:?}", cnt);
+            let mroot = mmr.get_merkle_root();
+
+            //println!("Merkle root: {:?}", mroot);
+            let leaf_hashes = mmr.get_leaf_hashes(n as usize, n as usize).unwrap();
+            //println!("Leaf hashes: {:?}", &leaf_hashes);
+            assert!(mmr.assign(leaf_hashes).is_ok());
+
+            assert!(mmr.validate().is_ok());
+
+        }
+
+        //let pushd1 = mmr.push(&data.to_vec());
+
     }
 }
