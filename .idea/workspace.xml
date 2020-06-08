@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CargoProjects">
+    <cargoProject FILE="$PROJECT_DIR$/Cargo.toml" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="9b0dad4d-1f2c-4b39-adfd-c535bcbc511c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../base_layer/mmr/tests/merkle_mountain_range.rs" beforeDir="false" afterPath="$PROJECT_DIR$/../../base_layer/mmr/tests/merkle_mountain_range.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../common/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/../../common/Cargo.toml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Rust File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MacroExpansionManager">
+    <option name="directoryName" value="ebtjesus" />
+  </component>
+  <component name="ProjectId" id="1d066EL7PyGOPhPzElABKyEoKkP" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="org.rust.cargo.project.model.PROJECT_DISCOVERY" value="true" />
+    <property name="org.rust.hideDetachedFileNotifications/Users/nathimog/audits/testing/tari/testing/fuzzer/src/cli.rs" value="true" />
+  </component>
+  <component name="RustProjectSettings">
+    <option name="toolchainHomeDirectory" value="$USER_HOME$/.cargo/bin" />
+    <option name="version" value="2" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9b0dad4d-1f2c-4b39-adfd-c535bcbc511c" name="Default Changelist" comment="" />
+      <created>1591549485833</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1591549485833</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="185" y="300" width="670" height="676" key="search.everywhere.popup" timestamp="1591588760875">
+      <screen x="0" y="23" width="1641" height="1027" />
+    </state>
+    <state x="185" y="300" width="670" height="676" key="search.everywhere.popup/0.23.1641.1027@0.23.1641.1027" timestamp="1591588760875" />
+  </component>
+</project>

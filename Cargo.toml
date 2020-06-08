@@ -1,0 +1,25 @@
+[package]
+name = "tari_fuzzer"
+description = "Tari fuzzer"
+authors = ["The Tari Development Community"]
+repository = "https://github.com/tari-project/tari"
+homepage = "https://tari.com"
+readme = "README.md"
+license = "BSD-3-Clause"
+version = "0.1.0"
+
+[dependencies]
+structopt = { version = "0.3", default-features = false }
+once_cell = "1.4.0"
+anyhow = "1.0"
+rust-crypto = "0.2.36"
+hex = "0.4.2"
+
+fuzz_targets = { path = "./fuzz_targets", default-features = false }
+proptest_helper = { path = "./common/corpus_gen", default-features = false }
+
+[workspace]
+
+[[bin]]
+name = "fuzzer"
+path = "src/cli.rs"

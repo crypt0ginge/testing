@@ -1,0 +1,14 @@
+[package]
+name = "proptest_helper"
+description = "Proptest for assisting with fuzzing etc"
+authors = ["The Tari Development Community"]
+repository = "https://github.com/tari-project/tari"
+homepage = "https://tari.com"
+readme = "README.md"
+license = "BSD-3-Clause"
+version = "0.1.0"
+
+
+[dependencies]
+proptest = "0.10.0"
+proptest-derive = "0.1.2"

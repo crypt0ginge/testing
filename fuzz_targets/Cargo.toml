@@ -1,0 +1,22 @@
+[package]
+name = "fuzz_targets"
+description = "Tari fuzzer"
+authors = ["The Tari Development Community"]
+repository = "https://github.com/tari-project/tari"
+homepage = "https://tari.com"
+readme = "README.md"
+license = "BSD-3-Clause"
+version = "0.1.0"
+
+[lib]
+path = "mod.rs"
+
+
+[dependencies]
+tari_crypto = { version = "^0.3" }
+digest = "0.8.0"
+proptest = "0.10.0"
+lazy_static = "1.3"
+
+tari_mmr = { path = "../../../base_layer/mmr", default-features = false }
+proptest_helper = { path = "../common/corpus_gen", default-features = false}
